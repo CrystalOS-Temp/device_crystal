@@ -2,4 +2,4 @@
 get_prop(mediaserver, media_wfd_prop);
 
 # Allow mediaserver to get legacy wfd videomode property
-get_prop(mediaserver, wfd_legacy_video_mode_prop);
+get_prop(mediaserver, exported_system_prop);
