@@ -9,3 +9,10 @@ set_prop(system_app, exported_system_prop);
 
 # Read selinux status
 allow system_app selinuxfs:file r_file_perms;
+
+# Allow Settings to find and communicate with HALs and daemons
+allow system_app proc_pagetypeinfo:file read;
+allow system_app storaged:binder call;
+allow system_app wificond:binder call;
+allow system_app system_suspend_control_service:service_manager find;
+allow system_app tracingproxy_service:service_manager find;
