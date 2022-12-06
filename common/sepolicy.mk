@@ -30,8 +30,3 @@ BOARD_VENDOR_SEPOLICY_DIRS += \
     device/crystal/sepolicy/common/dynamic \
     device/crystal/sepolicy/common/vendor
 endif
-
-# Include atv rules on atv product
-ifeq ($(PRODUCT_IS_ATV), true)
-include device/crystal/sepolicy/atv/sepolicy.mk
-endif
