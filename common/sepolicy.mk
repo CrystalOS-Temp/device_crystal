@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all products that
-# inherit from Awaken
+# inherit from crystal
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,29 +10,29 @@ endif
 endif
 
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    device/awaken/sepolicy/common/public
+    device/crystal/sepolicy/common/public
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/awaken/sepolicy/common/private
+    device/crystal/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/awaken/sepolicy/common/dynamic \
-    device/awaken/sepolicy/common/system \
+    device/crystal/sepolicy/common/dynamic \
+    device/crystal/sepolicy/common/system \
     hardware/google/pixel-sepolicy/flipendo \
     hardware/google/pixel-sepolicy/turbo_adapter
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/awaken/sepolicy/common/dynamic \
-    device/awaken/sepolicy/common/vendor \
+    device/crystal/sepolicy/common/dynamic \
+    device/crystal/sepolicy/common/vendor \
     hardware/google/pixel-sepolicy/flipendo \
     hardware/google/pixel-sepolicy/turbo_adapter
 endif
 
 # Selectively include legacy rules defined by the products
--include device/awaken/sepolicy/legacy-common/sepolicy.mk
+-include device/crystal/sepolicy/legacy-common/sepolicy.mk
 
 # Include atv rules on atv product
 ifeq ($(PRODUCT_IS_ATV), true)
-include device/awaken/sepolicy/atv/sepolicy.mk
+include device/crystal/sepolicy/atv/sepolicy.mk
 endif

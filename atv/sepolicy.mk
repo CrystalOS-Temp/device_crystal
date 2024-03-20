@@ -1,12 +1,12 @@
 #
 # This policy configuration will be used by atv products that
-# inherit from Awaken
+# inherit from crystal
 #
 
 ifneq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 BOARD_SEPOLICY_DIRS += \
-    device/awaken/sepolicy/atv/vendor
+    device/crystal/sepolicy/atv/vendor
 endif
 
 PRODUCT_PRIVATE_SEPOLICY_DIRS += \
-   device/awaken/sepolicy/atv/private
+   device/crystal/sepolicy/atv/private
